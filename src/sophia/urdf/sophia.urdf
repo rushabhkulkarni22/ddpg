@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="sophia">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.015616 0.00021121 0.043204"
+        rpy="0 0 0" />
+      <mass
+        value="11" />
+      <inertia
+        ixx="0.044664"
+        ixy="-9.2397E-05"
+        ixz="-0.0019638"
+        iyy="0.14818"
+        iyz="3.5651E-05"
+        izz="0.17986" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.68627 0.56078 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="6.0018E-10 -0.030086 1.3569E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.5" />
+      <inertia
+        ixx="0.0015953"
+        ixy="-1.1272E-10"
+        ixz="-1.5097E-10"
+        iyy="0.0028925"
+        iyz="-3.0787E-10"
+        izz="0.0015953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.21465 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="9.3153E-09 0.030086 6.8411E-09"
+        rpy="0 0 0" />
+      <mass
+        value="1.5" />
+      <inertia
+        ixx="0.0015953"
+        ixy="2.5101E-10"
+        ixz="-4.0198E-10"
+        iyy="0.0028925"
+        iyz="1.1863E-10"
+        izz="0.0015953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.21465 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="body_link">
+    <inertial>
+      <origin
+        xyz="-0.040232 0.0060133 0.90823"
+        rpy="0 0 0" />
+      <mass
+        value="18" />
+      <inertia
+        ixx="3.7198"
+        ixy="0.0040108"
+        ixz="0.073471"
+        iyy="3.5654"
+        iyz="0.03148"
+        izz="0.84512" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/body_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/body_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="body_joint"
+    type="fixed">
+    <origin
+      xyz="-0.30568 -0.00012419 0.094881"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="body_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="caster_back_left_sup">
+    <inertial>
+      <origin
+        xyz="-0.010376 -0.0008225 -0.013988"
+        rpy="0 0 0" />
+      <mass
+        value="0.017007" />
+      <inertia
+        ixx="9.225E-06"
+        ixy="1.9462E-07"
+        ixz="-2.5895E-06"
+        iyy="9.3325E-06"
+        iyz="-6.9504E-08"
+        izz="1.0476E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_left_sup.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_left_sup.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_back_left_sup_joint"
+    type="continuous">
+    <origin
+      xyz="-0.42943 0.11596 -0.0032205"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_back_left_sup" />
+    <axis
+      xyz="0.00020492 0 1" />
+  </joint>
+  <link
+    name="caster_back_left_link">
+    <inertial>
+      <origin
+        xyz="-3.0329E-06 2.3749E-05 6.2373E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.1184" />
+      <inertia
+        ixx="4.8162E-05"
+        ixy="-4.1946E-06"
+        ixz="-1.1016E-10"
+        iyy="8.0472E-05"
+        iyz="8.6263E-10"
+        izz="4.7626E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.033901 -0.0051284 -0.044649"
+      rpy="0 0 0" />
+    <parent
+      link="caster_back_left_sup" />
+    <child
+      link="caster_back_left_link" />
+    <axis
+      xyz="0.12668 -0.99194 -2.6051E-05" />
+  </joint>
+  <link
+    name="caster_back_right_sup">
+    <inertial>
+      <origin
+        xyz="-0.010034 -0.0027692 -0.013988"
+        rpy="0 0 0" />
+      <mass
+        value="0.017007" />
+      <inertia
+        ixx="9.1566E-06"
+        ixy="1.6084E-07"
+        ixz="-2.5296E-06"
+        iyy="9.4009E-06"
+        iyz="-5.5794E-07"
+        izz="1.0476E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_right_sup.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_right_sup.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_back_right_sup_joint"
+    type="continuous">
+    <origin
+      xyz="-0.42943 -0.11529 -0.0032205"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_back_right_sup" />
+    <axis
+      xyz="0.00020492 0 1" />
+  </joint>
+  <link
+    name="caster_back_right_link">
+    <inertial>
+      <origin
+        xyz="-7.469E-06 2.2747E-05 1.5327E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.1184" />
+      <inertia
+        ixx="5.0875E-05"
+        ixy="-9.894E-06"
+        ixz="-6.6665E-10"
+        iyy="7.7759E-05"
+        iyz="2.0303E-09"
+        izz="4.7626E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/caster_back_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_back_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.032815 -0.0099362 -0.044649"
+      rpy="0 0 0" />
+    <parent
+      link="caster_back_right_sup" />
+    <child
+      link="caster_back_right_link" />
+    <axis
+      xyz="0.31196 -0.95009 -6.4016E-05" />
+  </joint>
+  <link
+    name="hokuyo_link">
+    <inertial>
+      <origin
+        xyz="-7.1723E-06 3.2528E-09 -0.035"
+        rpy="0 0 0" />
+      <mass
+        value="0.021991" />
+      <inertia
+        ixx="9.5295E-06"
+        ixy="1.6055E-16"
+        ixz="-1.7275E-09"
+        iyy="9.5295E-06"
+        iyz="7.8346E-13"
+        izz="1.0996E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/hokuyo_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sophia/meshes/hokuyo_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hokuyo_joint"
+    type="fixed">
+    <origin
+      xyz="0.17566 0 0.16111"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="hokuyo_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+
+
+
+  <gazebo reference="hokuyo_link">
+    <material>Gazebo/FlatBlack</material>
+    <sensor type="ray" name="lds_lfcd_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>24</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.57</min_angle>
+            <max_angle>1.57</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.120</min>
+          <max>3.5</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+        <topicName>scan</topicName>
+        <frameName>hokyuo_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+
+  <gazebo reference="base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="left_wheel">
+   <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="right_link">
+   <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <kp>500000.0</kp>
+    <kd>10.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>0.1</maxVel>
+    <fdir1>1 0 0</fdir1>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="caster_back_right_link">
+   <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="caster_back_left_link">
+   <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+
+
+   <gazebo>
+    <plugin name="turtlebot3_waffle_pi_controller" filename="libgazebo_ros_diff_drive.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <legacyMode>false</legacyMode>
+      <updateRate>30</updateRate>
+      <leftJoint>left_joint</leftJoint>
+      <rightJoint>right_joint</rightJoint>
+      <wheelSeparation>0.43</wheelSeparation>
+      <wheelDiameter>0.22</wheelDiameter>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>10</wheelTorque>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+</robot>
